@@ -4,7 +4,7 @@ import { isAutheticated } from './index';
 
 
 const AdminRoutes=({ component:Component, ...rest })=> {
-    let auth = useAuth();
+    // let auth = useAuth();
     return (
       <Route
         {...rest}
