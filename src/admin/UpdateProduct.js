@@ -120,7 +120,7 @@ const UpdateProduct = ({ match }) => {
   const createProductForm = () => (
     <form>
       <span>Post photo</span>
-      <div className="form-group m-2">
+      <div className="form-group">
         <label className="btn btn-block btn-success">
           <input
             onChange={handleChange("photo")}
@@ -135,7 +135,7 @@ const UpdateProduct = ({ match }) => {
         <input
           onChange={handleChange("name")}
           name="photo"
-          className="form-control m-2"
+          className="form-control"
           placeholder="Name"
           value={name}
         />
@@ -144,7 +144,7 @@ const UpdateProduct = ({ match }) => {
         <textarea
           onChange={handleChange("description")}
           name="photo"
-          className="form-control m-2"
+          className="form-control"
           placeholder="Description"
           value={description}
         />
@@ -153,7 +153,7 @@ const UpdateProduct = ({ match }) => {
         <input
           onChange={handleChange("price")}
           type="number"
-          className="form-control m-2"
+          className="form-control"
           placeholder="Price"
           value={price}
         />
@@ -161,7 +161,7 @@ const UpdateProduct = ({ match }) => {
       <div className="form-group">
         <select
           onChange={handleChange("category")}
-          className="form-control m-2"
+          className="form-control"
           placeholder="Category"
         >
           <option>Select</option>
@@ -177,7 +177,7 @@ const UpdateProduct = ({ match }) => {
         <input
           onChange={handleChange("stock")}
           type="number"
-          className="form-control m-2"
+          className="form-control"
           placeholder="Stock"
           value={stock}
         />

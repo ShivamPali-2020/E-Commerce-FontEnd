@@ -25,9 +25,8 @@ const Signin = () => {
     setValues({ ...values, error: false, loading: true });
     signin({ email, password })
       .then(data => {
-        console.log(data);
-        if (data.err) {
-          setValues({ ...values, error: data.err, loading: false });
+        if (data.error) {
+          setValues({ ...values, error: data.error, loading: false });
         } else {
           authenticate(data, () => {
             setValues({
@@ -41,12 +40,11 @@ const Signin = () => {
   };
 
   const performRedirect = () => {
-    //TODO: do a redirect here
     if (didRedirect) {
       if (user && user.role === 1) {
-        return <Redirect to="/admin/dashboard"/>;
+        return <Redirect to="/admin/dashboard" />;
       } else {
-        return <Redirect to="/user/dashboard"/>
+        return <Redirect to="/user/dashboard" />;
       }
     }
     if (isAutheticated()) {

@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const AdminDashBoard = () => {
   const {
-    user: { name, email, role },
+    user: { name, email, role }
   } = isAutheticated();
 
   const adminLeftSide = () => {
@@ -20,7 +20,7 @@ const AdminDashBoard = () => {
           </li>
           <li className="list-group-item">
             <Link to="/admin/categories" className="nav-link text-success">
-              manage Categories
+              Manage Categories
             </Link>
           </li>
           <li className="list-group-item">
@@ -35,7 +35,7 @@ const AdminDashBoard = () => {
           </li>
           <li className="list-group-item">
             <Link to="/admin/orders" className="nav-link text-success">
-                Manage Orders
+              Manage Orders
             </Link>
           </li>
         </ul>
@@ -44,38 +44,28 @@ const AdminDashBoard = () => {
   };
 
   const adminRightSide = () => {
-    return(
-            <div className="card mb-4">
-                <h4 className="card-header">
-                    Admin Information
-                </h4>
-                <ul className="list-group">
-                    <li className="list-group-item">
-                        <span className="badge bg-success me-2">
-                            Name:
-                        </span>
-                        {name}
-                    </li>
-                    <li className="list-group-item">
-                        <span className="badge bg-success me-2">
-                            Email:
-                        </span>
-                        {email}
-                    </li>
-                    <li className="list-group-item">
-                        <span className="badge bg-danger me-2">
-                           Admin Area
-                        </span>
-                    </li>
-                </ul>
-            </div>
-        );
-  };
+    return (
+      <div className="card mb-4">
+        <h4 className="card-header">Admin Information</h4>
+        <ul className="list-group">
+          <li className="list-group-item">
+            <span className="badge badge-success mr-2">Name:</span> {name}
+          </li>
+          <li className="list-group-item">
+            <span className="badge badge-success mr-2">Email:</span> {email}
+          </li>
 
+          <li className="list-group-item">
+            <span className="badge badge-danger">Admin Area</span>
+          </li>
+        </ul>
+      </div>
+    );
+  };
   return (
     <Base
       title="Welcome to admin area"
-      description="Manage all of your product here"
+      description="Manage all of your products here"
       className="container bg-success p-4"
     >
       <div className="row">
